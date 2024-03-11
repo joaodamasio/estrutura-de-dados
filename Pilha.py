@@ -12,21 +12,24 @@ class PilhaDeLivros:
         return self.pilhaLivros.append(novo_livro)
     
     def remover_livro(self):
-        if self.pilhaLivros is None:
+        if len(self.pilhaLivros) < 1:
             return 
         else:
             return self.pilhaLivros.pop()
             
     def listar_livros(self):
-        if self.pilhaLivros is None:
+        if len(self.pilhaLivros) < 1:
             print("Não há livros nesta lista")
             return
         else:
             for livro in self.pilhaLivros:
                 print(f"Livro: {livro.titulo}, Número de Páginas: {livro.qtd_paginas}")
                 
-                
-                
+    def mostra_livro(self):
+            ultimo_index = len(self.pilhaLivros) - 1
+            print(f"O livro que está no topo é: {self.pilhaLivros[ultimo_index]}")
+            return self.pilhaLivros[ultimo_index]
+        
 pilhaLivro = PilhaDeLivros()
 pilhaLivro.adiconar_livro("Sim", 123)
 pilhaLivro.adiconar_livro("Não", 124)
