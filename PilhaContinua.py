@@ -30,7 +30,14 @@ class Pilha:
 
     def tamanho(self):
         return len(self.itens)
-
+        
+    def mostrar_pilha(self):
+        if self.vazia:
+            print("Está vazia")
+        else:
+            print("Elementos da pilha")
+            for item in reversed(self.item):
+                print(item)
 
 # Exemplo de uso:
 tamanho_pilha = int(input("Digite o tamanho da pilha: "))
@@ -44,7 +51,8 @@ while True:
     print("4. Verificar se a pilha está vazia")
     print("5. Verificar se a pilha está cheia")
     print("6. Tamanho da pilha")
-    print("7. Sair")
+    print("7. Mostrar elementos da pilha")
+    print("8. Sair")
 
     opcao = input("Digite o número da opção desejada: ")
 
@@ -64,6 +72,8 @@ while True:
     elif opcao == '6':
         print("Tamanho da pilha:", pilha.tamanho())
     elif opcao == '7':
+        self.mostrar_pilha()
+    elif opcao == '8':
         print("Saindo...")
         break
     else:
