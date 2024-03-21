@@ -44,10 +44,29 @@ class Fila:
     
     
     
-tamanho_fila = 2
+tamanho_fila = int(input("Digite o tamanho da lista: "))
 fila = Fila(tamanho_fila)
+while True:
+    
+    print("\nOpções:")
+    print("1 - Colocar na fila")
+    print("2 - Retirar da fila")
+    print("3 - Mostrar fila")
+    print("4 - Sair")
 
-fila.inserir(8)
-fila.inserir(6)
-print(fila.remover())
-fila.mostrar()
+    opcao = int(input("Escolha uma opção: "))
+
+    if opcao == 1:
+        valor = int(input("Digite o elemento a ser inserido na fila: "))
+        fila.inserir(valor)
+    elif opcao == 2:
+        print(fila.remover())
+    elif opcao == 3:
+        fila.mostrar()
+    elif opcao == 4:
+        break
+    else:
+        print("Opção inválida, escolha uma opcao valida")
+        
+
+
