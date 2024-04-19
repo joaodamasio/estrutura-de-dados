@@ -48,23 +48,35 @@ class CircularQueue:
             print()
 
 
-# Criando uma fila circular de tamanho 5
-cq = CircularQueue(5)
-cq.enqueue(1)
-cq.enqueue(2)
-cq.enqueue(3)
-cq.enqueue(4)
-cq.enqueue(5)
-cq.enqueue(6)
-cq.display()
+def main():
+    size = int(input("Digite o tamanho da fila circular: "))
+    queue = CircularQueue(size)
 
+    while True:
+        print("\nEscolha uma operação:")
+        print("1. Adicionar à fila")
+        print("2. Remover da fila")
+        print("3. Mostrar fila")
+        print("4. Sair")
 
+        choice = input("Opção: ")
 
-print("Removendo um elemento da fila: ")
-removed_value, next_front = cq.dequeue()
-if removed_value is not None:
-    print("Valor removido:", removed_value)
-    print("Nova posição de front:", next_front)
-cq.display()
+        if choice == "1":
+            item = input("Digite o item a ser adicionado: ")
+            queue.enqueue(item)
+        elif choice == "2":
+            item, new_front = queue.dequeue()
+            if new_front != -1:
+                print(f"Item removido: {item}")
+        elif choice == "3":
+            queue.display()
+        elif choice == "4":
+            print("Encerrando o programa...")
+            break
+        else:
+            print("Opção inválida. Tente novamente.")
+
+if __name__ == "__main__":
+    main()
 
 

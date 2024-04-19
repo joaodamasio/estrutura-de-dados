@@ -33,6 +33,32 @@ class Fila:
             for item in self.itens:
                 print(item)
 
-tamanho_fila = 8
-fila = Fila(tamanho_fila)
+def main():
+    tamanho_maximo = int(input('Digite o tamanho máximo da fila: '))
+    fila = Fila(tamanho_maximo)
+
+    while True:
+        print('\nEscolha uma operação:')
+        print('1. Inserir na fila')
+        print('2. Remover da fila')
+        print('3. Mostrar fila')
+        print('4. Sair')
+
+        opcao = input('Opção: ')
+
+        if opcao == '1':
+            item = input('Digite o item a ser inserido na fila: ')
+            fila.inserir_na_fila(item)
+        elif opcao == '2':
+            fila.excluir_item_da_fila()
+        elif opcao == '3':
+            fila.mostrar_fila()
+        elif opcao == '4':
+            print('Encerrando o programa...')
+            break
+        else:
+            print('Opção inválida. Tente novamente.')
+
+if __name__ == '__main__':
+    main()
 

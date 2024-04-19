@@ -72,7 +72,7 @@ while True:
     elif opcao == '6':
         print("Tamanho da pilha:", pilha.tamanho())
     elif opcao == '7':
-        self.mostrar_pilha()
+        opcao.mostrar_pilha()
     elif opcao == '8':
         print("Saindo...")
         break

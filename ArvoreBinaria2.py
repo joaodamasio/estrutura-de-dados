@@ -57,11 +57,7 @@ arvore.inserir(4)
 arvore.inserir(2) 
 arvore.inserir(7) 
 arvore.inserir(8) 
-arvore.inserir(12) 
-arvore.inserir(9) 
-arvore.inserir(10) 
-arvore.inserir(11) 
-arvore.inserir(6) 
+
 
 print("Árvore binária:")
 arvore.imprimir_arvore()
